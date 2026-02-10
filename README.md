@@ -90,20 +90,6 @@ The prediction module will use historical river water-level data (e.g., NWIC dat
 
 ---
 
-## 📂 Project Structure
-flood-monitoring/
-├── src/
-│ ├── App.js
-│ ├── firebase.js (ignored from git)
-│ └── index.js
-├── public/
-├── .gitignore
-├── package.json
-└── README.md
-
-
----
-
 ## 🔐 Firebase Configuration
 
 Firebase configuration is stored locally in `src/firebase.js` and is excluded from GitHub for security reasons.
