@@ -315,10 +315,14 @@ function App() {
     return out.reverse(); // newest first
   }, [allHistory]);
 
+  // useEffect(() => {
+  //   if (availableDates.length && !availableDates.includes(selectedDate))
+  //     setSelectedDate(availableDates[0]);
+  // }, [availableDates]);
   useEffect(() => {
     if (availableDates.length && !availableDates.includes(selectedDate))
       setSelectedDate(availableDates[0]);
-  }, [availableDates]);
+  }, [availableDates, selectedDate]);
 
   const history = useMemo(
     () => allHistory.filter(h => h.dateKey === selectedDate),
