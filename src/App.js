@@ -751,7 +751,7 @@ function App() {
   const minRise  = riseValues.length  ? Math.min(...riseValues)  : null;
   const maxRise  = riseValues.length  ? Math.max(...riseValues)  : null;
   const avgRise  = riseValues.length  ? (riseValues.reduce((s,v)=>s+v,0)/riseValues.length).toFixed(2) : null;
-  const minTotal = totalValues.length ? Math.min(...totalValues) : null;
+  
   const maxTotal = totalValues.length ? Math.max(...totalValues) : null;
   const tickInterval = Math.max(1, Math.floor(history.length / 8));
 
@@ -766,7 +766,7 @@ function App() {
 
   // chart config based on mode
   const chartDataKey   = chartMode === "rise" ? "rise" : "total";
-  const chartColor     = chartMode === "rise" ? "var(--rise-color)" : "var(--accent)";
+ 
   const chartColorHex  = chartMode === "rise" ? "#7c3aed" : "#1a6fe8";
   const warnRef        = chartMode === "rise" ? WARN_RISE_M   : BASE_LEVEL_M + WARN_RISE_M;
   const dangerRef      = chartMode === "rise" ? DANGER_RISE_M : BASE_LEVEL_M + DANGER_RISE_M;
